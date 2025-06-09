@@ -1,0 +1,20 @@
+#include <iostream>
+#include "GestorDePrestamos.h"
+#include "CreadorPrestamoFisico.h"
+#include "CreadorPrestamoDigital.h"
+
+using namespace std;
+
+int main() {
+	GestorDePrestamos gestor;
+	
+	cout << "==== Prestamo FISICO ====" << endl;
+	CreadorPrestamoFisico creadorFisico;
+	gestor.procesarPrestamo(&creadorFisico);
+	
+	cout << "\n==== Prestamo DIGITAL ====" << endl;
+	CreadorPrestamoDigital creadorDigital;
+	gestor.procesarPrestamo(&creadorDigital);
+	
+	return 0;
+}
